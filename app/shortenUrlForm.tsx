@@ -78,11 +78,11 @@ export default function ShortenUrlForm({ apiKey, shortenedUrls, setShortenedUrls
   };
 
   return (
-    <main className="flex p-10">
+    <main className="flex p-10 flex-col items-center w-screen">
       <Form {...form}>
         <form
           onSubmit={form.handleSubmit(handleSubmit)}
-          className="max-w-md w-full flex flex-col gap-4"
+          className="max-w-lg w-full flex flex-col gap-4 p-4 bg-white rounded-lg shadow-md"
         >
           <FormField
             control={form.control}

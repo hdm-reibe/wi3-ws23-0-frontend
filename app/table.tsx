@@ -7,7 +7,6 @@ import {
     useReactTable,
 } from "@tanstack/react-table"
 
-import { Button } from "@/components/ui/button";
 
 import {
     Table,
@@ -39,7 +38,7 @@ export default function UrlTable<TData, TValue>({
     })
 
     return (
-        <div className="rounded-md border" >
+        <div className="rounded-md border bg-white rounded-lg shadow-md">
             <Table>
                 <TableHeader>
                     {table.getHeaderGroups().map((headerGroup) => (
@@ -82,6 +81,6 @@ export default function UrlTable<TData, TValue>({
                     )}
                 </TableBody>
             </Table>
-        </div>
+        </div >
     )
 }

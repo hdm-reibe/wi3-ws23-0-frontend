@@ -66,37 +66,34 @@ export default function UpdateAPIKey({ setApiKey, setShortenedUrls }: Props) {
 
 
   return (
-    <main className="flex gap-10 ">
-      <Form {...form}>
-        <form
-          onSubmit={form.handleSubmit(handleSubmit)}
-          className="max-w-md w-full flex flex-col gap-4"
-        >
-          <FormField
-            control={form.control}
-            name="apiKey"
-            render={({ field }) => {
-              return (
-                <FormItem>
-                  <FormLabel>API Key</FormLabel>
-                  <FormControl>
-                    <Input
-                      placeholder="Enter your API Key"
-                      type="string"
-                      {...field}
-                    />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              );
-            }}
-          />
-          <Button type="submit" className="w-full">
-            Save API Key
-          </Button>
-        </form>
-      </Form>
-    </main>
-
+    <Form {...form}>
+      <form
+        onSubmit={form.handleSubmit(handleSubmit)}
+        className="max-w-lg w-full flex flex-col gap-4 p-4 bg-white rounded-lg shadow-md"
+      >
+        <FormField
+          control={form.control}
+          name="apiKey"
+          render={({ field }) => {
+            return (
+              <FormItem>
+                <FormLabel>API Key</FormLabel>
+                <FormControl>
+                  <Input
+                    placeholder="Enter your API Key"
+                    type="string"
+                    {...field}
+                  />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            );
+          }}
+        />
+        <Button type="submit" className="w-full">
+          Save API Key
+        </Button>
+      </form>
+    </Form>
   )
 }
