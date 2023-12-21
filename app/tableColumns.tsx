@@ -22,7 +22,7 @@ export const columns = ({
 }: Props): ColumnDef<ShortenedUrl>[] => [
   {
     accessorKey: "shortId",
-    header: "Short ID",
+    header: "Short URL",
     cell: ({ row }) => {
       var shortUrl =
         process.env.NEXT_PUBLIC_API_BASE_URL + "/" + row.original.shortId;
